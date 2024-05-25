@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{%block content%}
+<body  style="background-color: rgb(255, 255, 255);">
+    <div class="container" >
+        <h1 class="mt-4 mb-4" style ="text-align: center;">Weather Station Dashboard </h1>
+        <br>
+        <div class="row">
+            <div class="col-md-6" style="padding-bottom:40px; ">
+                <div class="card">
+                    <div class="card-header" style="background-color: rgb(22, 149, 252); text-align: center; color: aliceblue; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        Current Weather
+                    </div>
+                    <div class="card-body" style="background-color: rgb(255, 255, 255) ;">
+                        <!-- Display current weather information here -->
+                        <p>Temperature:{{ current_temperature }}°C</p>
+                        <p>Humidity: {{ current_humidity }}</p>
+                        <p>Wind Speed: {{ current_wind }} km/h</p>
+                        <p>Wind Direction: {{ current_wind_dir }} </p>
+                        <p>Rainfall: {{ current_rainfall }} mm/h</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header" style="background-color: rgb(22, 149, 252); text-align: center; color: aliceblue; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        Weather Forecast
+                    </div>
+                    <div class="card-body">
+                        <!-- Display weather forecast information here -->
+                        <p>Possibility of Rain Tommorow: {{ rain_forecast }} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+{% endblock %}
